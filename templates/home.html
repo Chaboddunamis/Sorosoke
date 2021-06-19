@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block custom_css %}
+  <link rel='stylesheet' type='text/css' href="{% static 'css/home_styles.css' %}">
+{% endblock %}
+
+
+{% block content %}
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div id="home-content">
+        <h1> SoroSoke!</h1>
+        <h3>Your Voice Matters!</h3>
+        <hr>
+        <a href="{% url 'accounts:login' %}">
+        <button type="button" class="btn btn-primary btn-lg">Get Started!</button>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
