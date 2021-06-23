@@ -55,7 +55,7 @@ class Choice(models.Model):
     choice_text = models.CharField(max_length=255)
 
     def __str__(self):
-        return "{} - {}".format(self.poll.text[:25], self.choice_text[:25])
+        return "{} - {}".format(self.poll.text[:100], self.choice_text[:50])
 
     @property
     def num_votes(self):
